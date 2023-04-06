@@ -1,4 +1,9 @@
+import Link from 'next/link'
 import './globals.css'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+
+      <body>
+        <div className='flex gap-4'>
+          <Link href="/" className="text-rose-500 text-2xl">home</Link>
+          <Link href="/testa" className="text-rose-500 text-2xl">testa</Link>
+          <Link href="/testb" className="text-rose-500 text-2xl">testb</Link>
+        </div>
+        <>
+          {children}
+        </>
+      </body>
     </html>
   )
 }
