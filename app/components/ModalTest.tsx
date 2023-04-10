@@ -6,6 +6,7 @@ import Input from "./suohui/Input";
 import Button from "./suohui/Button";
 import { AiFillGithub } from "react-icons/ai";
 import DropList from "./suohui/DropList";
+import Drawer from "./suohui/Drawer";
 
 const ModalTest = () => {
     const [modal, setModal] = useState<boolean>(false)
@@ -18,8 +19,18 @@ const ModalTest = () => {
         {text: 'aadfdfdf3', onClick: () => {console.log('bb')}},
     ]
 
+    const sideBarTestLists = [
+        {text: 'aaaaa1', onClick: () => {console.log('aa')}},
+        {text: 'bbbbb2', onClick: () => {console.log('bb')}},
+        {text: 'ccccc3', onClick: () => {console.log('bb')}},
+    ]
+
   return (
     <div>
+        <Drawer 
+            title='타이틀입니다'
+            items={sideBarTestLists}
+        />
         <button
             onClick={() => setModal(true)}
         >
