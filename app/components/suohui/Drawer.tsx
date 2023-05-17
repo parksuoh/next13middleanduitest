@@ -26,7 +26,10 @@ const Drawer = ({
                 {openIcon || '열기'}
             </button>
         )}
-        <div className={`top-0 left-0 fixed bg-white w-[45vw] md:w-[300px] shadow-md h-full p-10 z-20 ${isOpen ? 'translate-x-0' : 'translate-x-[-100%]'} ease-in-out duration-300`}>
+        <div className={`top-0 left-0 fixed bg-white w-[45vw] md:w-[300px] shadow-md h-full p-10 z-20 
+                        ${isOpen ? 'translate-x-0' : 'translate-x-[-100%]'} 
+                        ease-in-out duration-300`}
+        >
             <button 
                 onClick={() => setIsOpen(false)}
                 className="absolute right-5 top-5"
