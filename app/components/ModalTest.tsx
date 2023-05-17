@@ -47,7 +47,13 @@ const ModalTest = () => {
             onChange={(e) => setText(e.target.value)}
             label='인풋'
             width={500}
-            // small={true}
+        />
+        <Input 
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            label='인풋'
+            width={700}
+            small={true}
         />
         <Button 
             label='테스트버튼'
@@ -62,6 +68,7 @@ const ModalTest = () => {
             postion="left"
             items={dropTestLists}
             dropWidth={200}
+            onClose={() => {setIsToggle(false)}}
         >
             <button
                 onClick={() => {setIsToggle((prev) => !prev)}}

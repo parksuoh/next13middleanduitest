@@ -5,6 +5,11 @@ export function middleware(request: NextRequest) {
   let cookie= request.cookies.get('refresh_token')?.value
   console.log(Math.floor(Math.random() * 100))
 
+  if (request.nextUrl.pathname.startsWith('/testa')) {
+    console.log('ㅁㅁㅁㅁㅁㅁㅁㅁㅁaaaaa')
+  }
+
+
 }
 
 // See "Matching Paths" below to learn more

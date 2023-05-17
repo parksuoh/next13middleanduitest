@@ -39,7 +39,7 @@ const Button = ({
             align-center
             disabled:opacity-70
             disabled:cursor-not-allowed
-            rounded-lg
+            rounded-full
             hover:opacity-80
             transtion
             ${small ? 'py-1' : 'py-3'}

@@ -7,6 +7,7 @@ type ButtonProps = {
     postion:  "left" | "right" ;
     items: Array<{text: string, onClick: () => void}>;
     dropWidth: number;
+    onClose: () => void;
 }
 
 const DropList = ({
@@ -16,9 +17,17 @@ const DropList = ({
     postion,
     items,
     dropWidth,
+    onClose
 }: ButtonProps) => {
   return (
     <div className="relative w-fit h-fit">
+        {toggle && (
+            <div
+                className="fixed inset-0 w-full h-full"
+                onClick={() => onClose()}
+            >
+            </div>
+        )}
       <div>
         {children}
       </div>
